@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>week2_filter_search_page</title>
+  <meta name="author" content="Joyce Wen">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="../TheF2E-week2_filter.io/stylesheets/all.css">
+</head>
+
+<body>
+  <!-- wrapper -->
+  <div class="wrapper contain">
+    <!-- nav -->
+    <nav class="navbar navbar-dark bg-majorColor">
+      <div class="container justify-content-center">
+        <div class="row w-100 justify-content-md-between">
+          <a href="" class="navbar-brand col-md-2 text-center text-md-left">Navbar</a>
+          <div class="form-inline input-group col-md-8">
+            <input type="text" class="form-control border-0" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-line bg-white" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav E -->
+    <!-- main S -->
+    <div class="contain main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-12 px-0 px-md-3">
+            <!-- filter -->
+            <div id="accordion" class="js-filter filter">
+              <div class="card bg-grey-200">
+                <div class="card-header border-0 bg-grey-200" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Location
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body pt-0">
+                    <select class="custom-select" id="inlineFormCustomSelectPref">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-grey-200">
+                <div class="card-header border-0 bg-grey-200" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Date
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body pt-0">
+                    <div class="input-group input-daterange" id="datepicker">
+                      <div class="form-row w-100 py-1">
+                        <span class="input-group-addon col-3 text-right">from</span>
+                        <input type="text" class="form-control col-9" name="start" />
+                      </div>
+                      <div class="form-row w-100 py-1">
+                        <span class="input-group-addon col-3 text-right">to</span>
+                        <input type="text" class="form-control col-9" name="end" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-grey-200">
+                <div class="card-header border-0 bg-grey-200" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Categories
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body pt-0">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
+                        All
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                      <label class="form-check-label" for="defaultCheck2">
+                        Entertainment
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                      <label class="form-check-label" for="defaultCheck3">
+                        Food
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                      <label class="form-check-label" for="defaultCheck4">
+                        Learning
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                      <label class="form-check-label" for="defaultCheck5">
+                        Outdoors
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right  -->
+          <div class="col-md-8 col-12">
+            <!--  -->
+            <div class="py-4">
+              <p>Showing 15 results by…</p>
+              <div>
+                <button type="button" class="btn btn-outline-primary">Primary
+                  <i class="far fa-times-circle ml-1"></i>
+                </button>
+                <button type="button" class="btn btn-outline-primary">Primary
+                  <i class="far fa-times-circle ml-1"></i>
+                </button>
+
+              </div>
+            </div>
+            <!-- list result -->
+            <div class="card-columns d-flex flex-column">
+              <div class="card d-lg-flex flex-lg-row">
+                <img class="js-desktopPic card-img-top" src="https://picsum.photos/220/220/?random" alt="Card image cap">
+                <img class="js-mobilePic card-img-top" src="https://picsum.photos/334/196/?random" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content
+                    is a little bit longer.</p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card d-lg-flex flex-lg-row">
+                <img class="js-desktopPic card-img-top" src="https://picsum.photos/220/220/?random" alt="Card image cap">
+                <img class="js-mobilePic card-img-top" src="https://picsum.photos/334/196/?random" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card d-lg-flex flex-lg-row">
+                <img class="js-desktopPic card-img-top" src="https://picsum.photos/220/220/?random" alt="Card image cap">
+                <img class="js-mobilePic card-img-top" src="https://picsum.photos/334/196/?random" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has
+                    even longer content than the first to show that equal height action.</p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main -->
+
+  </div>
+  <!-- wrapper -->
+
+<script src="../TheF2E-week2_filter.io/javascripts/vendor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      //篩選畫面互動
+      function filter() {
+        if (window.screen.width > 767) {
+          $('.js-filter button.collapsed').attr('data-toggle', 'false');
+          $('#collapseOne, #collapseTwo, #collapseThree').addClass('show');
+          $('.js-desktopPic').css('display', 'block');
+          $('.js-mobilePic ').css('display', 'none');
+        } else {
+          $('.js-filter button.collapsed').attr('data-toggle', 'collapse');
+          $('#collapseOne, #collapseTwo, #collapseThree').removeClass('show');
+          $('.js-desktopPic').css('display', 'none');
+          $('.js-mobilePic ').css('display', 'block');
+        }
+      }
+
+      function resultPic() {
+        if (window.screen.width > 993) {
+          $('.js-desktopPic').css('display', 'block');
+          $('.js-mobilePic ').css('display', 'none');
+        } else {
+          $('.js-desktopPic').css('display', 'none');
+          $('.js-mobilePic ').css('display', 'block');
+        }
+      }
+      resultPic();
+      filter();
+      $(window).resize(function () {
+        filter();
+        resultPic();
+      });
+      //date
+      $('.input-daterange').datepicker({
+        daysOfWeekHighlighted: "0,6",
+        todayHighlight: true
+      });
+    });
+  </script>
+</body>
+
+</html>
